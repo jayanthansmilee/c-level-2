@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int amount, denominations[3] = {10, 5, 1};
+    int num_denominations = 0, i = 0;
+
+    printf("Enter the amount: ");
+    scanf("%d", &amount);
+
+    while (amount > 0 && i < 3) {
+        num_denominations += amount / denominations[i];
+        amount %= denominations[i];
+        i++;
+    }
+
+    printf("Number of denominations for amount %d: %d \n", amount, num_denominations);
+
+    return 0;
+}

@@ -13,10 +13,6 @@ int main() {
             break; // If the input is zero, it has only one digit
         }
 
-        if (num < 0) {
-            num = abs(num); // Convert negative number to positive
-        }
-
         do {
             num /= 10;
             count++;
